@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,4 +23,12 @@ public class Credit {
 
     @Column(name = "amount")
     private String amount;
+
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "Persons_Credits",
+            joinColumns = {@JoinColumn(name = "credit_id")},
+            inverseJoinColumns = {@JoinColumn(name = "person_id")}
+    )
+    private Set<Person> persons;
 }
