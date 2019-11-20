@@ -1,5 +1,6 @@
-package com.pluszkie.flywayCredit.model;
+package com.pluszkie.flywayCredit.person;
 
+import com.pluszkie.flywayCredit.credit.Credit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "person")
-class Person {
+public class Person {
 
     @Id
     @GeneratedValue

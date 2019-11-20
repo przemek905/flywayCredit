@@ -1,7 +1,9 @@
-package com.pluszkie.flywayCredit.model;
+package com.pluszkie.flywayCredit.car;
 
+import com.pluszkie.flywayCredit.credit.Credit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "car")
-public class Car {
+class Car {
     @Id
     @GeneratedValue
     private Long id;
@@ -26,7 +28,7 @@ public class Car {
     private int year;
 
     @Column(name = "isCredited")
-    private boolean isCredited;
+    private Boolean isCredited;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "credit_car_id")

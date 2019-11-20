@@ -1,5 +1,6 @@
-package com.pluszkie.flywayCredit.model;
+package com.pluszkie.flywayCredit.credit;
 
+import com.pluszkie.flywayCredit.person.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
