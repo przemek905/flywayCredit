@@ -33,4 +33,12 @@ class Car {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "credit_car_id")
     private Credit credit;
+
+    void updateValues(Car car) {
+        this.mark = car.mark;
+        this.model = car.model;
+        this.year = car.year;
+        this.isCredited = car.isCredited;
+        this.credit = car.credit;
+    }
 }
